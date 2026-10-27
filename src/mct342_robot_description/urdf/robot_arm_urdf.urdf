@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="Robotic Arm_V4.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0399361224539781 -0.103918453700723 0.0588111467708138"
+        rpy="0 0 0" />
+      <mass
+        value="0.0960374647687132" />
+      <inertia
+        ixx="0.000127992374265441"
+        ixy="6.84507669804952E-11"
+        ixz="3.91396755618805E-06"
+        iyy="0.000137660900428952"
+        iyz="4.47337777514632E-12"
+        izz="0.000207983638444363" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.12156862745098 0.419607843137255 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.00643460210920303 0.0172893971363357 -0.00137197240631336"
+        rpy="0 0 0" />
+      <mass
+        value="0.0680382266926049" />
+      <inertia
+        ixx="5.81331813538312E-05"
+        ixy="5.17764381970509E-06"
+        ixz="-6.41736919561054E-07"
+        iyy="5.467636163819E-05"
+        iyz="6.24274411898634E-06"
+        izz="4.50177202219463E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_0"
+    type="revolute">
+    <origin
+      xyz="0.039819 -0.10392 0.093108"
+      rpy="1.5708 0 -0.72299" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.000129817222175782 0.0585891192922847 0.00596913019207884"
+        rpy="0 0 0" />
+      <mass
+        value="0.0643962898087288" />
+      <inertia
+        ixx="0.000107041684681985"
+        ixy="-7.33389163867357E-10"
+        ixz="1.89529387420207E-10"
+        iyy="9.11026305554698E-06"
+        iyz="2.40300282282098E-07"
+        izz="0.000111848232510277" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.254901960784314 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0.0404532568712296 -0.013741729606692"
+      rpy="1.5707963267949 0.791801188176107 1.5707963267949" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="3.5"
+      upper="7.4"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.000143952786583634 -0.0653867938057917 0.00904109183211271"
+        rpy="0 0 0" />
+      <mass
+        value="0.0583337652830724" />
+      <inertia
+        ixx="9.7007777975486E-05"
+        ixy="-1.54950249717467E-09"
+        ixz="3.41382195659739E-10"
+        iyy="8.1726956053479E-06"
+        iyz="1.48646583728009E-06"
+        izz="0.000101447222558479" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.12156862745098 0.419607843137255 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.12 0"
+      rpy="3.14159265358979 0 0.578485035291522" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.139"
+      upper="3.089"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.000165984697596849 0.0273983113865617 0.0154247902816369"
+        rpy="0 0 0" />
+      <mass
+        value="0.0841448949644773" />
+      <inertia
+        ixx="6.41740493836423E-05"
+        ixy="-6.95874630942541E-08"
+        ixz="-5.15320443567356E-11"
+        iyy="1.51313415535736E-05"
+        iyz="-5.66702089356367E-07"
+        izz="6.41653790202093E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.12 0"
+      rpy="3.14159265358979 0 0.123517495723304" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.885"
+      upper="2.478"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.00503498951779746 0.00965158232930186 -0.00303659946017706"
+        rpy="0 0 0" />
+      <mass
+        value="0.0217005820190038" />
+      <inertia
+        ixx="4.2508740532975E-06"
+        ixy="1.10640932602326E-08"
+        ixz="-4.0191205959261E-09"
+        iyy="2.91610972852047E-06"
+        iyz="6.15541221776654E-07"
+        izz="4.94125620352147E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.00504999999999975 0.101175708400649 0.00890000000000027"
+      rpy="3.14159265358979 -0.173044621965657 3.14159265358979" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="Graber_base">
+    <inertial>
+      <origin
+        xyz="0.00543396155995998 0.0338718542651446 0.00298984589062062"
+        rpy="0 0 0" />
+      <mass
+        value="0.0275109429463549" />
+      <inertia
+        ixx="9.78514563130742E-06"
+        ixy="3.2109572727022E-06"
+        ixz="6.57459397363617E-07"
+        iyy="5.75007086096842E-06"
+        iyz="-1.26171917051065E-06"
+        izz="1.35753006862911E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Graber_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.12156862745098 0.419607843137255 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Graber_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0.00500000000000003 0.0184242915978769 0"
+      rpy="0.199619761768694 1.5707963267949 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="Graber_base" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.527"
+      upper="2.071"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="Gear_1">
+    <inertial>
+      <origin
+        xyz="-0.00348670091310818 0.00335349941701341 0.00115341791676016"
+        rpy="0 0 0" />
+      <mass
+        value="0.00206246735633714" />
+      <inertia
+        ixx="1.51050989299216E-07"
+        ixy="8.36767867207181E-08"
+        ixz="6.10120461988658E-08"
+        iyy="2.89471646866947E-07"
+        iyz="-6.63162426845931E-08"
+        izz="2.59776670047498E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Gear_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.694117647058824 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Gear_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gear1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0120500000000268 0.0399403953024965 0.0174999999999377"
+      rpy="-1.04454964543198 0.209948972305172 -0.653913434313786" />
+    <parent
+      link="Graber_base" />
+    <child
+      link="Gear_1" />
+    <axis
+      xyz="-0.208409992911677 -0.845710980068636 0.491261857918871" />
+    <limit
+      lower="-0.305"
+      upper="1.799"
+      effort="200"
+      velocity="4" />
+  </joint>
+  <link
+    name="Finger_1">
+    <inertial>
+      <origin
+        xyz="-0.0133817943691433 0.00553066288740334 0.0212574189886718"
+        rpy="0 0 0" />
+      <mass
+        value="0.00230163007155044" />
+      <inertia
+        ixx="4.76071132865996E-07"
+        ixy="-6.39668366423883E-10"
+        ixz="3.36028648517354E-07"
+        iyy="7.42355819160372E-07"
+        iyz="7.85474121932387E-10"
+        izz="2.75984915209125E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Finger_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.286274509803922 0.662745098039216 0.329411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Finger_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Finger_1_joitn"
+    type="revolute">
+    <origin
+      xyz="-0.0239115639757946 0.0131387608413763 0.0124743766090574"
+      rpy="-0.513537888373779 0 -0.241617451902228" />
+    <parent
+      link="Gear_1" />
+    <child
+      link="Finger_1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+    <mimic
+      joint="Gear1_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="Gear_2">
+    <inertial>
+      <origin
+        xyz="-0.00153437242212504 0.00393638372974453 0.00296112156539691"
+        rpy="0 0 0" />
+      <mass
+        value="0.00212256882328141" />
+      <inertia
+        ixx="2.54860163917883E-07"
+        ixy="5.36132604166509E-08"
+        ixz="4.9635482735995E-08"
+        iyy="2.78408610162061E-07"
+        iyz="-1.12224564473043E-07"
+        izz="1.8343446775999E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Gear_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.694117647058824 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Gear_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gear2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0152999999999666 0.0402903953025221 0.0174999999999377"
+      rpy="-1.04454964543198 0.209948972305172 -0.653913434313786" />
+    <parent
+      link="Graber_base" />
+    <child
+      link="Gear_2" />
+    <axis
+      xyz="-0.208409992911678 -0.84571098006865 0.491261857918847" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+    <mimic
+      joint="Gear1_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="Finger_2">
+    <inertial>
+      <origin
+        xyz="-0.0194079645922081 -0.015946196232936 0.00553066511696487"
+        rpy="0 0 0" />
+      <mass
+        value="0.00230163000428728" />
+      <inertia
+        ixx="3.62899217909771E-07"
+        ixy="-3.50359111311922E-07"
+        ixz="-6.98833140510959E-10"
+        iyy="3.8915681657825E-07"
+        iyz="-7.33234289809424E-10"
+        izz="7.42355806652914E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Finger_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.286274509803922 0.662745098039216 0.329411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Finger_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Finger_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0113327536120727 0.015987532620692 0.0227149179234786"
+      rpy="-2.08745294522062 -0.104874688572535 -0.182214038587465" />
+    <parent
+      link="Gear_2" />
+    <child
+      link="Finger_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+    <mimic
+      joint="Gear1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="Support_1">
+    <inertial>
+      <origin
+        xyz="0.0118864845295816 0.00809677152849331 0.00167279134632584"
+        rpy="0 0 0" />
+      <mass
+        value="0.000426127114488937" />
+      <inertia
+        ixx="2.04062000598078E-08"
+        ixy="-2.7812831486164E-08"
+        ixz="8.75214667386159E-10"
+        iyy="4.22914980963441E-08"
+        iyz="5.96174014493217E-10"
+        izz="6.17403414140676E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Support_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Support_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Support_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.00320000000004006 0.0597903953025035 0.0174999999999377"
+      rpy="3.14159265358979 0 2.48767921927601" />
+    <parent
+      link="Graber_base" />
+    <child
+      link="Support_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+    <mimic
+      joint="Gear1_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="Support_2">
+    <inertial>
+      <origin
+        xyz="-0.00510971072916819 0.00907840502360935 0.0100557383138421"
+        rpy="0 0 0" />
+      <mass
+        value="0.000426127114488939" />
+      <inertia
+        ixx="5.2481289166248E-08"
+        ixy="1.19551314427543E-08"
+        ixz="1.74709475729369E-08"
+        iyy="4.5578456856051E-08"
+        iyz="-2.38996803606665E-08"
+        izz="2.63782935479207E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Support_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mct342_robot_description/meshes/Support_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Support_2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0068 0.05979 0.0175"
+      rpy="-1.0445 0.20995 -0.65391" />
+    <parent
+      link="Graber_base" />
+    <child
+      link="Support_2" />
+    <axis
+      xyz="0.20841 0.84571 -0.49126" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="200"
+      velocity="4" />
+    <mimic
+      joint="Gear1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+</robot>
